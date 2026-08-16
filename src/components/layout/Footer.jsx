@@ -41,7 +41,8 @@ export default function Footer() {
                 RT
               </div>
               <span style={{ fontSize: '20px', fontWeight: 800, color: '#f8fafc' }}>
-                PORTFOLIO<span style={{ color: '#00f2fe' }}>.3D</span>
+                PORTFOLIO
+                {/* <span style={{ color: '#00f2fe' }}>.3D</span> */}
               </span>
             </div>
             <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', marginBottom: '20px' }}>
