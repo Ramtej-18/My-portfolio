@@ -15,7 +15,7 @@ export const PERSONAL_INFO = {
   phone: "+91 9767866152",
   availableForHire: true,
   socials: {
-    github: "https://github.com/Ramtej-08",
+    github: "https://github.com/Ramtej-18",
     linkedin: "https://www.linkedin.com/in/ramtej-tandel-471b70245/",
     twitter: "https://twitter.com",
     instagram: "TejTandel_007"
