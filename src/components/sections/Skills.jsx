@@ -25,9 +25,9 @@ export default function Skills() {
           <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#f8fafc', marginBottom: '16px' }}>
             Skills & <span className="gradient-text-cyan">Technologies</span>
           </h2>
-          <p style={{ maxWidth: '640px', margin: '0 auto', color: '#94a3b8', fontSize: '15px' }}>
+          {/* <p style={{ maxWidth: '640px', margin: '0 auto', color: '#94a3b8', fontSize: '15px' }}>
             Interact with the 3D physics spheres below and explore full-stack mastery across modern web ecosystems.
-          </p>
+          </p> */}
         </div>
 
         {/* 3D Floating Interactive Balls Section */}

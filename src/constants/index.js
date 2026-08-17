@@ -18,7 +18,7 @@ export const PERSONAL_INFO = {
     github: "https://github.com/Ramtej-18",
     linkedin: "https://www.linkedin.com/in/ramtej-tandel-471b70245/",
     twitter: "https://twitter.com",
-    instagram: "TejTandel_007"
+    instagram: "https://www.instagram.com/__tej007__?igsh=MThheW93cnRkeGppYg==&igsi=MThheW93cnRkeGppYg=="
   }
 };
 
@@ -46,14 +46,8 @@ export const SERVICES = [
     gradient: "from-cyan-500 to-blue-600"
   },
   {
-    title: "3D & Interactive Web",
-    description: "Immersive 3D web experiences using Three.js, React Three Fiber, GLSL shaders, and WebGL physics.",
-    icon: "Cuboid",
-    gradient: "from-purple-500 to-pink-500"
-  },
-  {
     title: "MERN Stack Specialist",
-    description: "High-throughput RESTful APIs and GraphQL services backed by MongoDB, Express, React, and Node.js.",
+    description: "High-throughput RESTful APIs service backed by MongoDB, Express, React, and Node.js.",
     icon: "Layers",
     gradient: "from-emerald-400 to-cyan-500"
   },
@@ -67,18 +61,16 @@ export const SERVICES = [
 
 export const SKILL_CATEGORIES = [
   {
-    category: "Frontend & 3D",
+    category: "Frontend",
     skills: [
       { name: "React.js", level: 95, color: "#00f2fe" },
       { name: "JavaScript / ES6+", level: 95, color: "#f7df1e" },
-      { name: "TypeScript", level: 85, color: "#3178c6" },
       { name: "Tailwind / CSS3", level: 95, color: "#38bdf8" },
-      { name: "Framer Motion", level: 90, color: "#f72585" },
       { name: "HTML5 / Canvas", level: 98, color: "#ff6b6b" }
     ]
   },
   {
-    category: "Backend & Cloud",
+    category: "Backend",
     skills: [
       { name: "Node.js", level: 92, color: "#22c55e" },
       { name: "Express.js", level: 90, color: "#94a3b8" },
@@ -95,7 +87,7 @@ export const FLOATING_3D_SKILLS = [
   { name: "Node.js", icon: "🟢", color: "#22c55e" },
   { name: "JavaScript", icon: "⚡", color: "#f7df1e" },
   { name: "MongoDB", icon: "🍃", color: "#10b981" },
-  { name: "TypeScript", icon: "🔷", color: "#3178c6" },
+  { name: "Express.Js", icon: "🔷", color: "#3178c6" },
   { name: "Tailwind", icon: "🌊", color: "#38bdf8" }
 ];
 
@@ -219,7 +211,7 @@ export const PROJECTS = [
 
 ];
 
-export const CODE_SNIPPET = `// Ramtej - Full Stack 3D Developer
+export const CODE_SNIPPET = `// Ramtej - Full Stack Developer
 const developer = {
   name: "Ramtej",
   role: "Full-Stack (MERN) Developer",
