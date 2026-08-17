@@ -1,7 +1,7 @@
 import React from 'react';
 import { PERSONAL_INFO, NAV_LINKS } from '../../constants';
 import { ArrowUp } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '../ui/Icons';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from '../ui/Icons';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -173,6 +173,36 @@ export default function Footer() {
                 }}
               >
                 <LinkedinIcon size={18} />
+              </a>
+              <a
+                href={PERSONAL_INFO.socials. instagram}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '10px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(0, 242, 254, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#94a3b8',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#00f2fe';
+                  e.currentTarget.style.borderColor = '#00f2fe';
+                  e.currentTarget.style.boxShadow = '0 0 12px rgba(0, 242, 254, 0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = '#94a3b8';
+                  e.currentTarget.style.borderColor = 'rgba(0, 242, 254, 0.2)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <InstagramIcon  size={18} />
               </a>
             </div>
           </div>

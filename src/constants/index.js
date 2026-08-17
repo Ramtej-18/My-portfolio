@@ -18,7 +18,7 @@ export const PERSONAL_INFO = {
     github: "https://github.com/Ramtej-18",
     linkedin: "https://www.linkedin.com/in/ramtej-tandel-471b70245/",
     twitter: "https://twitter.com",
-    instagram: "https://www.instagram.com/__tej007__?igsh=MThheW93cnRkeGppYg==&igsi=MThheW93cnRkeGppYg=="
+    instagram: "https://www.instagram.com/TejTandel_007"
   }
 };
 
