@@ -126,16 +126,16 @@ export default function Hero({ playAudio }) {
                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                   <button
                     onClick={() => handleScrollTo('projects')}
-                    className="btn-cyber-primary"
+                    className="btn-cyber-resume"
                   >
                     View Projects <ArrowRight size={18} />
                   </button>
 
                   <button
                     onClick={() => handleScrollTo('contact')}
-                    className="btn-cyber-secondary"
+                    className="btn-cyber-resume"
                   >
-                    <Send size={16} /> Contact Me
+                    Contact Me <Send size={16} />
                   </button>
 
                   <a
