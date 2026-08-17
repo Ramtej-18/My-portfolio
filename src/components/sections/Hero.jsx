@@ -142,7 +142,7 @@ export default function Hero({ playAudio }) {
                     href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-cyber-primary"
+                    className="btn-cyber-resume"
                   >
                     Resume <FileDown size={18} />
                   </a>
