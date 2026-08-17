@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
 
   ],
   bio: "Passionate Full-Stack Developer dedicated to building immersive, lightning-fast, and responsive digital experiences. Combining cutting-edge 3D technologies, modern React architectures, and robust backend engineering.",
-  tagline: "Crafting Interactive Web Experiences with MERN & 3D Magic",
+  tagline: "Full Stack Developer | Building Digital Solutions That Matter",
   location: "Pune, India",
   email: "tandelramtej6@gmail.com",
   phone: "+91 9767866152",
