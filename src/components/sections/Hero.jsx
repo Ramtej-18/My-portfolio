@@ -142,37 +142,9 @@ export default function Hero({ playAudio }) {
                     href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '12px 24px',
-                      borderRadius: '12px',
-                      border: '1px solid rgba(157, 78, 221, 0.5)',
-                      background: 'rgba(157, 78, 221, 0.1)',
-                      color: '#c084fc',
-                      fontSize: '15px',
-                      fontWeight: 700,
-                      textDecoration: 'none',
-                      fontFamily: "'Space Grotesk', sans-serif",
-                      cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                      boxShadow: '0 0 15px rgba(157, 78, 221, 0.15)'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = 'rgba(157, 78, 221, 0.2)';
-                      e.currentTarget.style.borderColor = '#9d4edd';
-                      e.currentTarget.style.boxShadow = '0 0 20px rgba(157, 78, 221, 0.4)';
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'rgba(157, 78, 221, 0.1)';
-                      e.currentTarget.style.borderColor = 'rgba(157, 78, 221, 0.5)';
-                      e.currentTarget.style.boxShadow = '0 0 15px rgba(157, 78, 221, 0.15)';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                    }}
+                    className="btn-cyber-primary"
                   >
-                    <FileDown size={16} /> Resume
+                    Resume <FileDown size={18} />
                   </a>
                 </div>
               </div>
