@@ -5,7 +5,8 @@ export const PERSONAL_INFO = {
   roles: [
     "Full-Stack Web Developer",
     "MERN Stack Specialist",
-    "React & Node.js Engineer"
+    "Logical Thinking",
+    "Positive Attitude"
 
   ],
   bio: "I’m Ramtej Tandel, a Full Stack Developer specializing in the MERN stack. I build responsive, scalable, and user-friendly web applications using React.js, Node.js, Express.js, and MongoDB. I have hands-on experience developing RESTful APIs, implementing secure authentication with JWT and Bcrypt, and delivering applications from database design to deployment. I enjoy solving real-world problems through clean, efficient, and modern web solutions.",
