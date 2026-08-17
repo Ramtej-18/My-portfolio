@@ -8,7 +8,7 @@ export const PERSONAL_INFO = {
     "React & Node.js Engineer"
 
   ],
-  bio: "Passionate Full-Stack Developer dedicated to building immersive, lightning-fast, and responsive digital experiences. Combining cutting-edge 3D technologies, modern React architectures, and robust backend engineering.",
+  bio: "I’m Ramtej Tandel, a Full Stack Developer specializing in the MERN stack. I build responsive, scalable, and user-friendly web applications using React.js, Node.js, Express.js, and MongoDB. I have hands-on experience developing RESTful APIs, implementing secure authentication with JWT and Bcrypt, and delivering applications from database design to deployment. I enjoy solving real-world problems through clean, efficient, and modern web solutions.",
   tagline: "Full Stack Developer | Building Digital Solutions That Matter",
   location: "Pune, India",
   email: "tandelramtej6@gmail.com",
