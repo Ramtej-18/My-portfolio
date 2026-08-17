@@ -32,8 +32,8 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-  { value: "3+", label: "Years Experience", suffix: "Y+" },
-  { value: "25+", label: "Projects Built", suffix: "+" },
+  { value: "6+", label: "Months Experience", suffix: "M+" },
+  { value: "10+", label: "Projects Built", suffix: "+" },
   { value: "15+", label: "Tech Stacks Mastered", suffix: "+" },
   { value: "99%", label: "Client Satisfaction", suffix: "%" }
 ];

@@ -42,7 +42,7 @@ export default function Projects({ playAudio }) {
             Featured <span className="gradient-text-cyan">Projects</span>
           </h2>
           <p style={{ maxWidth: '600px', margin: '0 auto', color: '#94a3b8', fontSize: '15px' }}>
-            A showcase of real-world full-stack architectures, interactive 3D web applications, and high-performance software.
+            A showcase of real-world full-stack architectures, interactive web applications, and high-performance software.
           </p>
         </div>
 
