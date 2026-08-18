@@ -7,22 +7,22 @@ export default function FloatingTechBall({ skill }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      className="tech-ball-wrapper"
       style={{
-        width: '120px',
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         cursor: 'pointer',
         transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-        transform: hovered ? 'translateY(-8px) scale(1.06)' : 'translateY(0px) scale(1)'
+        transform: hovered ? 'translateY(-6px) scale(1.05)' : 'translateY(0px) scale(1)',
+        touchAction: 'manipulation'
       }}
     >
       {/* 3D Cyber Hologram Sphere Container */}
       <div
+        className="tech-ball-sphere"
         style={{
-          width: '90px',
-          height: '90px',
           borderRadius: '50%',
           position: 'relative',
           display: 'flex',
@@ -53,11 +53,11 @@ export default function FloatingTechBall({ skill }) {
 
         {/* Center Tech Icon */}
         <span
+          className="tech-ball-icon"
           style={{
-            fontSize: '32px',
             filter: hovered ? `drop-shadow(0 0 10px ${skill.color || '#00f2fe'})` : 'none',
             transition: 'transform 0.3s ease',
-            transform: hovered ? 'scale(1.2) rotate(6deg)' : 'scale(1)'
+            transform: hovered ? 'scale(1.18) rotate(6deg)' : 'scale(1)'
           }}
         >
           {skill.icon}
@@ -67,8 +67,8 @@ export default function FloatingTechBall({ skill }) {
       {/* Skill Label */}
       <span
         style={{
-          marginTop: '10px',
-          fontSize: '13px',
+          marginTop: '8px',
+          fontSize: '12px',
           fontWeight: 700,
           color: hovered ? '#ffffff' : skill.color || '#f8fafc',
           textShadow: hovered ? `0 0 10px ${skill.color || '#00f2fe'}` : 'none',
@@ -79,6 +79,31 @@ export default function FloatingTechBall({ skill }) {
       >
         {skill.name}
       </span>
+
+      <style>{`
+        .tech-ball-wrapper {
+          width: 100px;
+        }
+        .tech-ball-sphere {
+          width: 82px;
+          height: 82px;
+        }
+        .tech-ball-icon {
+          font-size: 28px;
+        }
+        @media (max-width: 640px) {
+          .tech-ball-wrapper {
+            width: 82px;
+          }
+          .tech-ball-sphere {
+            width: 70px;
+            height: 70px;
+          }
+          .tech-ball-icon {
+            font-size: 24px;
+          }
+        }
+      `}</style>
     </div>
   );
 }

@@ -5,13 +5,9 @@ import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
 import { Send, Mail, MapPin, CheckCircle2, AlertCircle } from 'lucide-react';
 
-// ─── EmailJS Config ───────────────────────────────────────────────────────────
-// Sign up free at https://www.emailjs.com/ → add Gmail service → create template
-// Then replace the 3 values below with your own IDs:
-const EMAILJS_SERVICE_ID  = 'service_d7r36pj';  // e.g. service_abc123
-const EMAILJS_TEMPLATE_ID = 'template_ssjdfbo'; // e.g. template_xyz789
-const EMAILJS_PUBLIC_KEY  = '3Zhq5JiKddd8TaH3N'; // Public Key from Account → API Keys
-// ─────────────────────────────────────────────────────────────────────────────
+const EMAILJS_SERVICE_ID  = 'service_d7r36pj';
+const EMAILJS_TEMPLATE_ID = 'template_ssjdfbo';
+const EMAILJS_PUBLIC_KEY  = '3Zhq5JiKddd8TaH3N';
 
 export default function Contact({ playAudio }) {
   const formRef = useRef(null);
@@ -50,8 +46,8 @@ export default function Contact({ playAudio }) {
       setFormData({ name: '', email: '', subject: '', message: '' });
 
       confetti({
-        particleCount: 100,
-        spread: 70,
+        particleCount: 80,
+        spread: 60,
         origin: { y: 0.6 },
         colors: ['#00f2fe', '#9d4edd', '#4facfe', '#ffffff']
       });
@@ -66,89 +62,140 @@ export default function Contact({ playAudio }) {
   };
 
   return (
-    <section id="contact" style={{ position: 'relative', paddingTop: '100px', paddingBottom: '60px' }}>
+    <section
+      id="contact"
+      style={{
+        position: 'relative',
+        paddingTop: '80px',
+        paddingBottom: '50px'
+      }}
+    >
       <div className="container-custom">
         {/* Section Heading */}
-        <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            color: '#00f2fe',
-            fontFamily: "'JetBrains Mono', monospace",
-            fontSize: '13px',
-            textTransform: 'uppercase',
-            letterSpacing: '2px',
-            marginBottom: '10px'
-          }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              color: '#00f2fe',
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: '12.5px',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+              marginBottom: '10px'
+            }}
+          >
             <Mail size={14} /> Transmit Message
           </div>
-          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#f8fafc', marginBottom: '16px' }}>
+          <h2
+            style={{
+              fontSize: 'clamp(1.9rem, 4vw, 3rem)',
+              fontWeight: 800,
+              color: '#f8fafc',
+              marginBottom: '14px',
+              lineHeight: 1.2
+            }}
+          >
             Get In <span className="gradient-text-cyan">Touch</span>
           </h2>
-          <p style={{ maxWidth: '600px', margin: '0 auto', color: '#94a3b8', fontSize: '15px' }}>
+          <p
+            style={{
+              maxWidth: '600px',
+              margin: '0 auto',
+              color: '#94a3b8',
+              fontSize: 'clamp(0.9rem, 1.5vw, 1rem)'
+            }}
+          >
             Have a project in mind, an opportunity to discuss, or just want to say hi? Send me a transmission.
           </p>
         </div>
 
         {/* 2-Column Contact Grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '40px',
-          alignItems: 'center'
-        }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: '28px',
+            alignItems: 'stretch'
+          }}
+        >
           {/* Left Column: 3D Hologram Globe & Direct Info */}
-          <div className="glass-panel" style={{ borderRadius: '24px', padding: '32px 28px', textAlign: 'center' }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#f8fafc', marginBottom: '8px' }}>
-              Global Connectivity
-            </h3>
-            <p style={{ color: '#94a3b8', fontSize: '14px', marginBottom: '16px' }}>
-              Available for remote work worldwide and on-site collaborations.
-            </p>
+          <div
+            className="glass-panel"
+            style={{
+              borderRadius: '24px',
+              padding: '24px 20px',
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between'
+            }}
+          >
+            <div>
+              <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', marginBottom: '6px' }}>
+                Global Connectivity
+              </h3>
+              <p style={{ color: '#94a3b8', fontSize: '13px', marginBottom: '12px' }}>
+                Available for remote work worldwide and on-site collaborations.
+              </p>
 
-            {/* 3D Rotating Globe */}
-            <HologramGlobe />
+              {/* 3D Rotating Globe */}
+              <HologramGlobe />
+            </div>
 
             {/* Contact Details List */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', textAlign: 'left', marginTop: '10px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <div style={{
-                  width: '40px',
-                  height: '40px',
-                  borderRadius: '10px',
-                  backgroundColor: 'rgba(0, 242, 254, 0.1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0
-                }}>
-                  <Mail size={18} color="#00f2fe" />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'left', marginTop: '14px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div
+                  style={{
+                    width: '38px',
+                    height: '38px',
+                    borderRadius: '10px',
+                    backgroundColor: 'rgba(0, 242, 254, 0.1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0
+                  }}
+                >
+                  <Mail size={17} color="#00f2fe" />
                 </div>
-                <div>
-                  <div style={{ fontSize: '12px', color: '#64748b', textTransform: 'uppercase' }}>Email</div>
-                  <a href={`mailto:${PERSONAL_INFO.email}`} style={{ color: '#f8fafc', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>
+                <div style={{ minWidth: 0 }}>
+                  <div style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase' }}>Email</div>
+                  <a
+                    href={`mailto:${PERSONAL_INFO.email}`}
+                    style={{
+                      color: '#f8fafc',
+                      textDecoration: 'none',
+                      fontSize: '13.5px',
+                      fontWeight: 600,
+                      wordBreak: 'break-all'
+                    }}
+                  >
                     {PERSONAL_INFO.email}
                   </a>
                 </div>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <div style={{
-                  width: '40px',
-                  height: '40px',
-                  borderRadius: '10px',
-                  backgroundColor: 'rgba(157, 78, 221, 0.1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0
-                }}>
-                  <MapPin size={18} color="#9d4edd" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div
+                  style={{
+                    width: '38px',
+                    height: '38px',
+                    borderRadius: '10px',
+                    backgroundColor: 'rgba(157, 78, 221, 0.1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0
+                  }}
+                >
+                  <MapPin size={17} color="#9d4edd" />
                 </div>
                 <div>
-                  <div style={{ fontSize: '12px', color: '#64748b', textTransform: 'uppercase' }}>Location</div>
-                  <span style={{ color: '#f8fafc', fontSize: '14px', fontWeight: 600 }}>
+                  <div style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase' }}>Location</div>
+                  <span style={{ color: '#f8fafc', fontSize: '13.5px', fontWeight: 600 }}>
                     {PERSONAL_INFO.location}
                   </span>
                 </div>
@@ -157,10 +204,19 @@ export default function Contact({ playAudio }) {
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="glass-panel" style={{ borderRadius: '24px', padding: '36px 32px' }}>
-            <form ref={formRef} onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div
+            className="glass-panel"
+            style={{
+              borderRadius: '24px',
+              padding: '24px 20px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center'
+            }}
+          >
+            <form ref={formRef} onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div>
-                <label style={{ display: 'block', color: '#cbd5e1', fontSize: '13px', fontWeight: 600, marginBottom: '8px' }}>
+                <label style={{ display: 'block', color: '#cbd5e1', fontSize: '12.5px', fontWeight: 600, marginBottom: '6px' }}>
                   Your Name *
                 </label>
                 <input
@@ -172,9 +228,9 @@ export default function Contact({ playAudio }) {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px 16px',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(6, 8, 19, 0.7)',
+                    padding: '11px 14px',
+                    borderRadius: '10px',
+                    backgroundColor: 'rgba(6, 8, 19, 0.75)',
                     border: '1px solid rgba(0, 242, 254, 0.25)',
                     color: '#fff',
                     fontSize: '14px',
@@ -193,7 +249,7 @@ export default function Contact({ playAudio }) {
               </div>
 
               <div>
-                <label style={{ display: 'block', color: '#cbd5e1', fontSize: '13px', fontWeight: 600, marginBottom: '8px' }}>
+                <label style={{ display: 'block', color: '#cbd5e1', fontSize: '12.5px', fontWeight: 600, marginBottom: '6px' }}>
                   Your Email *
                 </label>
                 <input
@@ -205,9 +261,9 @@ export default function Contact({ playAudio }) {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px 16px',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(6, 8, 19, 0.7)',
+                    padding: '11px 14px',
+                    borderRadius: '10px',
+                    backgroundColor: 'rgba(6, 8, 19, 0.75)',
                     border: '1px solid rgba(0, 242, 254, 0.25)',
                     color: '#fff',
                     fontSize: '14px',
@@ -226,7 +282,7 @@ export default function Contact({ playAudio }) {
               </div>
 
               <div>
-                <label style={{ display: 'block', color: '#cbd5e1', fontSize: '13px', fontWeight: 600, marginBottom: '8px' }}>
+                <label style={{ display: 'block', color: '#cbd5e1', fontSize: '12.5px', fontWeight: 600, marginBottom: '6px' }}>
                   Subject
                 </label>
                 <input
@@ -237,9 +293,9 @@ export default function Contact({ playAudio }) {
                   placeholder="Project Inquiry / Job Opportunity"
                   style={{
                     width: '100%',
-                    padding: '12px 16px',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(6, 8, 19, 0.7)',
+                    padding: '11px 14px',
+                    borderRadius: '10px',
+                    backgroundColor: 'rgba(6, 8, 19, 0.75)',
                     border: '1px solid rgba(0, 242, 254, 0.25)',
                     color: '#fff',
                     fontSize: '14px',
@@ -258,7 +314,7 @@ export default function Contact({ playAudio }) {
               </div>
 
               <div>
-                <label style={{ display: 'block', color: '#cbd5e1', fontSize: '13px', fontWeight: 600, marginBottom: '8px' }}>
+                <label style={{ display: 'block', color: '#cbd5e1', fontSize: '12.5px', fontWeight: 600, marginBottom: '6px' }}>
                   Message *
                 </label>
                 <textarea
@@ -270,9 +326,9 @@ export default function Contact({ playAudio }) {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px 16px',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(6, 8, 19, 0.7)',
+                    padding: '11px 14px',
+                    borderRadius: '10px',
+                    backgroundColor: 'rgba(6, 8, 19, 0.75)',
                     border: '1px solid rgba(0, 242, 254, 0.25)',
                     color: '#fff',
                     fontSize: '14px',
@@ -293,34 +349,38 @@ export default function Contact({ playAudio }) {
 
               {/* Status alerts */}
               {status.error && (
-                <div style={{
-                  padding: '12px',
-                  borderRadius: '8px',
-                  backgroundColor: 'rgba(239, 68, 68, 0.15)',
-                  border: '1px solid #ef4444',
-                  color: '#fca5a5',
-                  fontSize: '13px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px'
-                }}>
-                  <AlertCircle size={16} /> {status.error}
+                <div
+                  style={{
+                    padding: '10px 12px',
+                    borderRadius: '8px',
+                    backgroundColor: 'rgba(239, 68, 68, 0.15)',
+                    border: '1px solid #ef4444',
+                    color: '#fca5a5',
+                    fontSize: '12.5px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px'
+                  }}
+                >
+                  <AlertCircle size={15} /> {status.error}
                 </div>
               )}
 
               {status.success && (
-                <div style={{
-                  padding: '12px',
-                  borderRadius: '8px',
-                  backgroundColor: 'rgba(16, 185, 129, 0.15)',
-                  border: '1px solid #10b981',
-                  color: '#6ee7b7',
-                  fontSize: '13px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px'
-                }}>
-                  <CheckCircle2 size={16} /> Message transmitted successfully! I will reply shortly.
+                <div
+                  style={{
+                    padding: '10px 12px',
+                    borderRadius: '8px',
+                    backgroundColor: 'rgba(16, 185, 129, 0.15)',
+                    border: '1px solid #10b981',
+                    color: '#6ee7b7',
+                    fontSize: '12.5px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px'
+                  }}
+                >
+                  <CheckCircle2 size={15} /> Message transmitted successfully! I will reply shortly.
                 </div>
               )}
 
@@ -328,13 +388,13 @@ export default function Contact({ playAudio }) {
                 type="submit"
                 disabled={status.loading}
                 className="btn-cyber-primary"
-                style={{ width: '100%', marginTop: '6px' }}
+                style={{ width: '100%', marginTop: '4px', minHeight: '44px' }}
               >
                 {status.loading ? (
                   <span>TRANSMITTING MESSAGE...</span>
                 ) : (
                   <>
-                    <Send size={18} /> Transmit Message
+                    <Send size={16} /> Transmit Message
                   </>
                 )}
               </button>

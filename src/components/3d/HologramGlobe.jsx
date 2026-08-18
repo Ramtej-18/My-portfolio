@@ -63,7 +63,13 @@ function GlobeMesh() {
 
 export default function HologramGlobe() {
   return (
-    <div style={{ width: '100%', height: '360px', position: 'relative' }}>
+    <div
+      style={{
+        width: '100%',
+        height: 'clamp(220px, 30vh, 320px)',
+        position: 'relative'
+      }}
+    >
       <Canvas
         dpr={[1, 1.5]}
         camera={{ position: [0, 0, 3.8], fov: 45 }}

@@ -34,9 +34,9 @@ export default function TypewriterText({ words = [], typingSpeed = 100, deleting
   }, [currentText, isDeleting, currentWordIndex, words, typingSpeed, deletingSpeed, pauseTime]);
 
   return (
-    <span className="inline-flex items-center">
-      <span className="gradient-text-purple font-bold">{currentText}</span>
-      <span className="ml-1 text-cyan-400 font-bold animate-pulse">|</span>
+    <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+      <span className="gradient-text-purple" style={{ fontWeight: 700 }}>{currentText}</span>
+      <span style={{ marginLeft: '3px', color: '#00f2fe', fontWeight: 800 }} className="animate-pulse">|</span>
     </span>
   );
 }

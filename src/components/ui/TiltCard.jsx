@@ -1,11 +1,15 @@
 import React, { useRef } from 'react';
 
-export default function TiltCard({ children, className = '', maxTilt = 10 }) {
+export default function TiltCard({ children, className = '', maxTilt = 10, style = {} }) {
   const cardRef = useRef(null);
   const glareRef = useRef(null);
   const rafRef = useRef(null);
 
   const handleMouseMove = (e) => {
+    // Only apply tilt on pointer-fine (mouse/desktop) devices
+    if (window.matchMedia && !window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      return;
+    }
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -50,7 +54,8 @@ export default function TiltCard({ children, className = '', maxTilt = 10 }) {
         position: 'relative',
         transformStyle: 'preserve-3d',
         transition: 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)',
-        willChange: 'transform'
+        willChange: 'transform',
+        ...style
       }}
       className={className}
     >
