@@ -109,8 +109,8 @@ export const QUALIFICATIONS = {
       institution: "Smt. Kashibai Navale College of Engineering",
       duration: "2023 - 2026",
       location: "Maharashtra, India",
-      description: "Bachelor of Engineering in Electronics & Telecommunication with CGPA of 7.3. Gained strong foundations in programming, data structures, algorithms, and software engineering principles alongside core electronics coursework.",
-      grade: "First Class (7.3 CGPA)"
+      description: "Bachelor of Engineering in Electronics & Telecommunication. Gained strong foundations in programming, data structures, algorithms, and software engineering principles alongside core electronics coursework.",
+      grade: "First Class "
     },
     {
       degree: "Diploma in Computer Engineering",
@@ -118,7 +118,7 @@ export const QUALIFICATIONS = {
       duration: "2021 - 2023",
       location: "Maharashtra, India",
       description: "Completed a Diploma in Computer Engineering with a strong foundation in programming, web development, databases, and software engineering concepts. Developed practical knowledge through academic projects and hands-on experience with technologies such as HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB. This diploma helped me build problem-solving skills and prepared me to develop responsive, user-friendly, and full-stack web applications.",
-      grade: "First Class with Distinction (76.23%)"
+      grade: "First Class with Distinction "
     },
     {
       degree: "SSC",
@@ -126,7 +126,7 @@ export const QUALIFICATIONS = {
       duration: "2020",
       location: "Maharashtra, India",
       description: "Successfully completed my Secondary School Certificate (SSC), building a strong foundation in mathematics, science, communication, and problem-solving. My school education helped me develop discipline, analytical thinking, and a strong interest in technology, which motivated me to pursue further studies in Computer Engineering.",
-      grade: "First Class with Distinction (76.80%)"
+      grade: "First Class with Distinction "
     }
   ]
 };
